@@ -8,10 +8,5 @@ from audit_tool.web import app
 if __name__ == "__main__":
     setup_database()
     add_admin_user()
-    login_gui()
-    # Example usage of the Sn1per scanner
-    target = "example_target"
-    scan_result = run_sn1per_scan(target)
-    print(scan_result)
     # Run the web server
     app.run(debug=True)
