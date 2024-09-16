@@ -79,6 +79,20 @@ def reports():
             reports = [r for r in reports if r['status'] == filter_status]
     return render_template('reports.html', reports=reports)
 
+@app.route('/report/<report_id>')
+def report_detail(report_id):
+    if 'username' not in session:
+        return redirect(url_for('login'))
+    # Fetch detailed report data based on report_id
+    report = {
+        "id": report_id,
+        "date": "2024-09-15",
+        "type": "Vulnerability Scan",
+        "status": "Completed",
+        "details": "Detailed report content goes here."
+    }
+    return render_template('report_detail.html', report=report)
+
 @app.route('/chat')
 def chat():
     if 'username' not in session:
