@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}Schedule Audit{% endblock %}
+
+{% block content %}
+<h1>Schedule Audit</h1>
+<form method="POST">
+    <div class="form-group">
+        <label for="target">Target</label>
+        <input type="text" class="form-control" id="target" name="target" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Schedule</button>
+</form>
+{% endblock %}
