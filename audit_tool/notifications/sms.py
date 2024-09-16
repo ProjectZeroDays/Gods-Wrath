@@ -1,6 +1,7 @@
 import requests
 import json
 import os
+import logging
 
 # Load configuration
 CONFIG_DIR = os.path.join(os.path.expanduser("~"), ".config", "audit_tool")
@@ -19,10 +20,5 @@ def send_sms(message, to_number):
         }
         response = requests.post(api_url, data=data)
         if response.status_code == 200:
+            logging.info(f"SMS sent to {to_number}.")
             return True
-        else:
-            print(f"Error sending SMS: {response.status_code}")
-            return False
-    except Exception as e:
-        print(f"Error sending SMS: {e}")
-        return False
