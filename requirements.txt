@@ -1,4 +1,5 @@
 cryptography
 requests
 tkinter
-subprocess
+pyotp
+flask
