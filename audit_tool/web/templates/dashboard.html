@@ -1,13 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
-</head>
-<body>
-    <h1>System Status</h1>
-    <p>Recent Activities</p>
-    <!-- Add widgets and other dashboard elements here -->
-</body>
-</html>
+{% extends "base.html" %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+<h1>Dashboard</h1>
+<p>System Status: All systems operational.</p>
+<p>Recent Activities: No recent activities.</p>
+<!-- Add widgets and other dashboard elements here -->
+{% endblock %}
