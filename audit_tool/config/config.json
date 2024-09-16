@@ -1,0 +1,11 @@
+{
+    "smtp_server": "smtp.example.com",
+    "smtp_port": 587,
+    "email": "your_email@example.com",
+    "email_password": "your_password",
+    "sms_api_url": "https://sms-api.example.com/send",
+    "sms_api_key": "your_sms_api_key",
+    "payment_api_url": "https://payment-gateway.example.com/process",
+    "payment_api_key": "your_payment_api_key",
+    "2fa_secret": "your_2fa_secret"
+}
