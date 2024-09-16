@@ -1,57 +1,50 @@
 # God's Wrath Audit Tool
 
 ## Overview
-
-This tool provides a comprehensive framework for automated offensive and defensive cybersecurity testing and auditing. It integrates open-source and low-cost resources to ensure scalability, cost-effectiveness, and high-quality metrics and reporting.
+This Framework is an AI-piloted, automated offensive and defensive cybersecurity testing and auditing framework. It integrates open-source tools, generates comprehensive reports, and provides a user-friendly web interface for scheduling audits, downloading reports, and accepting payments. The framework is scalable, cost-effective, and meets industry standards.
 
 ## Features
-
-- **User Authentication**: Secure login with encrypted credentials.
-- **Audit Scheduling**: Schedule audits with a user-friendly interface.
-- **Notifications**: Email and SMS notifications for audit results and updates.
-- **Payment Processing**: Handle payments securely through integrated payment gateways.
-- **AI Piloting**: Automated scanning and testing with AI-driven insights.
-- **Report Generation**: Generate comprehensive audit reports in various formats.
-- **Collaboration Tools**: Integrated messaging platform for team communication.
+- **Automated Scanning**: Leverage AI-powered tools for automated vulnerability scanning and penetration testing.
+- **Comprehensive Reporting**: Generate detailed reports that meet compliance and federal regulations.
+- **User Management**: Manage users and their access rights through a secure web interface.
+- **Audit Scheduling**: Schedule audits and receive notifications for upcoming audits.
+- **Secure Payments**: Accept payments securely through integrated payment gateways.
+- **Two-Factor Authentication**: Enhance security with two-factor authentication for user logins.
+- **Chat Integration**: Integrate with Rocket.Chat for team communication and customer service.
 
 ## Installation
+Follow the steps below to install and set up the Vengence Framework:
 
-1. **Clone the Repository**:
-   ```bash
-   git clone https://github.com/ProjectZeroDays/Gods-Wrath.git
-   cd Gods-Wrath
-   ```
+1. **Clone the repository**:
+    ```bash
+    git clone https://github.com/your-repo/vengence-framework.git
+    cd vengence-framework
+    ```
 
-2. **Run the Install Script**:
-   ```bash
-   chmod +x install.sh
-   ./install.sh
-   ```
+2. **Install dependencies**:
+    ```bash
+    pip install -r requirements.txt
+    ```
 
-3. **Set Up the Database**:
-   ```bash
-   python3 audit_tool/database/setup_database.py
-   ```
+3. **Run the installation script**:
+    ```bash
+    bash install.sh
+    ```
+
+4. **Start the web server**:
+    ```bash
+    python main.py
+    ```
 
 ## Usage
-
-1. **Run the Main Script**:
-   ```bash
-   python3 audit_tool/main.py
-   ```
-
-2. **Login**:
-   - Use the GUI to log in with your credentials.
-
-## Configuration
-
-- **Email and SMS Notifications**:
-  - Update the `config.json` file in the `audit_tool/config` directory with your email and SMS API credentials.
+- **Login**: Access the web interface and log in using your credentials.
+- **Dashboard**: View system status, recent activities, and upcoming audits.
+- **Schedule Audits**: Schedule new audits and view audit results.
+- **Reports**: Filter and view detailed audit reports.
+- **Chat**: Communicate with your team through the integrated chat interface.
 
 ## Contributing
-
-We welcome contributions! Please fork the repository and submit pull requests.
+We welcome contributions from the community. Please read our contributing guidelines for more information.
 
 ## License
-
-This project is licensed under the MIT License.
+This project is licensed under the MIT License. See the LICENSE file for details.
