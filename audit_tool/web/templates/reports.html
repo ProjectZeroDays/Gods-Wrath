@@ -33,6 +33,7 @@
             <th>Date</th>
             <th>Type</th>
             <th>Status</th>
+            <th>Actions</th>
         </tr>
     </thead>
     <tbody>
@@ -41,6 +42,7 @@
             <td>{{ report.date }}</td>
             <td>{{ report.type }}</td>
             <td>{{ report.status }}</td>
+            <td><a href="{{ url_for('report_detail', report_id=report.id) }}" class="btn btn-info">View Details</a></td>
         </tr>
         {% endfor %}
     </tbody>
