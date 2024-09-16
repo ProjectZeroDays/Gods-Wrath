@@ -40,4 +40,11 @@
         {% for report in reports %}
         <tr>
             <td>{{ report.date }}</td>
-            <td>{{ report.type
+            <td>{{ report.type }}</td>
+            <td>{{ report.status }}</td>
+            <td><a href="{{ url_for('report_detail', report_id=report.id) }}" class="btn btn-info">View Details</a></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
