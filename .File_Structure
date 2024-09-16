@@ -26,4 +26,5 @@ Vengence/
 │   ├── main.py
 ├── install.sh
 ├── requirements.txt
+|-- LICENSE
 └── README.md
