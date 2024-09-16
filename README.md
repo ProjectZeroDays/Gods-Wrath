@@ -18,8 +18,8 @@ This tool provides a comprehensive framework for automated offensive and defensi
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/ProjectZeroDays/Vengence.git
-   cd Vengence
+   git clone https://github.com/ProjectZeroDays/Gods-Wrath.git
+   cd Gods-Wrath
    ```
 
 2. **Run the Install Script**:
