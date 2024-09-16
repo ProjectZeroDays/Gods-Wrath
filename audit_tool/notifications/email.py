@@ -3,6 +3,7 @@ from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 import json
 import os
+import logging
 
 # Load configuration
 CONFIG_DIR = os.path.join(os.path.expanduser("~"), ".config", "audit_tool")
@@ -24,5 +25,6 @@ def send_email(subject, body, to_email):
         server.login(from_email, from_password)
         server.sendmail(from_email, to_email, msg.as_string())
         server.quit()
+        logging.info(f"Email sent to {to_email}.")
     except Exception as e:
-        print(f"Error sending email: {e}")
+        logging.error(f"Error sending email: {e}")
