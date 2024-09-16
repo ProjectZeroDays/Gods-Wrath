@@ -5,6 +5,7 @@ from audit_tool.sn1per.scanner import run_sn1per_scan
 import pyotp
 import json
 import os
+import requests
 
 # Load configuration
 CONFIG_DIR = os.path.join(os.path.expanduser("~"), ".config", "audit_tool")
@@ -50,16 +51,32 @@ def schedule():
         flash(f'Scan result: {scan_result}', 'info')
     return render_template('schedule.html')
 
-@app.route('/reports')
+@app.route('/reports', methods=['GET', 'POST'])
 def reports():
     if 'username' not in session:
         return redirect(url_for('login'))
     # Logic to fetch and display reports
-    return render_template('reports.html')
+    reports = [
+        {"date": "2024-09-15", "type": "Vulnerability Scan", "status": "Completed"},
+        {"date": "2024-09-14", "type": "Penetration Test", "status": "In Progress"}
+    ]
+    if request.method == 'POST':
+        filter_date = request.form.get('filter_date')
+        filter_type = request.form.get('filter_type')
+        filter_status = request.form.get('filter_status')
+        # Apply filters to reports
+        if filter_date:
+            reports = [r for r in reports if r['date'] == filter_date]
+        if filter_type:
+            reports = [r for r in reports if r['type'] == filter_type]
+        if filter_status:
+            reports = [r for r in reports if r['status'] == filter_status]
+    return render_template('reports.html', reports=reports)
 
 @app.route('/chat')
 def chat():
     if 'username' not in session:
         return redirect(url_for('login'))
-    # Logic to integrate with Mattermost or Rocket.Chat
-    return render_template('chat.html')
+    # Logic to integrate with Rocket.Chat
+    rocket_chat_url = "https://chat.example.com"
+    return render_template('chat.html', rocket_chat_url=rocket_chat_url)
