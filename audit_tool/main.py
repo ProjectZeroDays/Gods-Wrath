@@ -9,4 +9,6 @@ if __name__ == "__main__":
     add_admin_user()
     login_gui()
     # Example usage of the Sn1per scanner
-    run_sn1per_scan("example_target")
+    target = "example_target"
+    scan_result = run_sn1per_scan(target)
+    print(scan_result)
