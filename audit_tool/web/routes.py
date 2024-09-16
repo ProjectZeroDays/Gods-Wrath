@@ -100,3 +100,26 @@ def chat():
     # Logic to integrate with Rocket.Chat
     rocket_chat_url = "https://chat.example.com"
     return render_template('chat.html', rocket_chat_url=rocket_chat_url)
+
+@app.route('/profile')
+def profile():
+    if 'username' not in session:
+        return redirect(url_for('login'))
+    # Fetch user profile data
+    user_profile = {
+        "username": session['username'],
+        "email": "user@example.com",
+        "bio": "Cybersecurity enthusiast."
+    }
+    return render_template('profile.html', user_profile=user_profile)
+
+@app.route('/activity_feed')
+def activity_feed():
+    if 'username' not in session:
+        return redirect(url_for('login'))
+    # Example activity feed data
+    activities = [
+        {"date": "2024-09-15", "activity": "Completed a vulnerability scan."},
+        {"date": "2024-09-14", "activity": "Scheduled a penetration test."}
+    ]
+    return render_template('activity_feed.html', activities=activities)
