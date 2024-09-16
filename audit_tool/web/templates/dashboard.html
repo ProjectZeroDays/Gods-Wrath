@@ -4,32 +4,16 @@
 
 {% block content %}
 <h1>Dashboard</h1>
-<p>System Status: All systems operational.</p>
-<p>Recent Activities: No recent activities.</p>
 <div class="row">
+    {% for widget in widgets %}
     <div class="col-md-4">
         <div class="card">
             <div class="card-body">
-                <h5 class="card-title">Widget 1</h5>
-                <p class="card-text">Details about widget 1.</p>
+                <h5 class="card-title">{{ widget.title }}</h5>
+                <p class="card-text">{{ widget.content }}</p>
             </div>
         </div>
     </div>
-    <div class="col-md-4">
-        <div class="card">
-            <div class="card-body">
-                <h5 class="card-title">Widget 2</h5>
-                <p class="card-text">Details about widget 2.</p>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-4">
-        <div class="card">
-            <div class="card-body">
-                <h5 class="card-title">Widget 3</h5>
-                <p class="card-text">Details about widget 3.</p>
-            </div>
-        </div>
-    </div>
+    {% endfor %}
 </div>
 {% endblock %}
