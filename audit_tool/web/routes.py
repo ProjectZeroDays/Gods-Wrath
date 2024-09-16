@@ -17,7 +17,13 @@ with open(CONFIG_PATH, "r") as config_file:
 def dashboard():
     if 'username' not in session:
         return redirect(url_for('login'))
-    return render_template('dashboard.html')
+    # Example widgets for dashboard
+    widgets = [
+        {"title": "System Status", "content": "All systems operational."},
+        {"title": "Recent Activities", "content": "No recent activities."},
+        {"title": "Upcoming Audits", "content": "Next audit scheduled for 2024-09-20."}
+    ]
+    return render_template('dashboard.html', widgets=widgets)
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
@@ -55,7 +61,7 @@ def schedule():
 def reports():
     if 'username' not in session:
         return redirect(url_for('login'))
-    # Logic to fetch and display reports
+    # Example reports data
     reports = [
         {"date": "2024-09-15", "type": "Vulnerability Scan", "status": "Completed"},
         {"date": "2024-09-14", "type": "Penetration Test", "status": "In Progress"}
