@@ -123,3 +123,14 @@ def activity_feed():
         {"date": "2024-09-14", "activity": "Scheduled a penetration test."}
     ]
     return render_template('activity_feed.html', activities=activities)
+
+@app.route('/admin')
+def admin():
+    if 'username' not in session or session['role'] != 'admin':
+        return redirect(url_for('login'))
+    # Example admin panel data
+    users = [
+        {"username": "admin", "role": "admin"},
+        {"username": "user1", "role": "user"}
+    ]
+    return render_template('admin.html', users=users)
