@@ -16,4 +16,10 @@ fi
 # Install required Python packages
 pip install -r requirements.txt
 
+# Install Sn1per
+git clone https://github.com/1N3/Sn1per.git
+cd Sn1per
+sudo bash install.sh
+cd ..
+
 echo "Installation complete."
