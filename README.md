@@ -1,9 +1,7 @@
 # God's Wrath
 
-!God's Wrath Framework
-
 ## Overview
-The Vengence Framework is an AI-piloted, automated offensive and defensive cybersecurity testing and auditing framework. It integrates open-source tools, generates comprehensive reports, and provides a user-friendly web interface for scheduling audits, downloading reports, and accepting payments. The framework is scalable, cost-effective, and meets industry standards.
+The Framework is an AI-piloted, automated offensive and defensive cybersecurity testing and auditing framework. It integrates open-source tools, generates comprehensive reports, and provides a user-friendly web interface for scheduling audits, downloading reports, and accepting payments. The framework is scalable, cost-effective, and meets industry standards.
 
 ## Features
 - **Automated Scanning**: Leverage AI-powered tools for automated vulnerability scanning and penetration testing.
